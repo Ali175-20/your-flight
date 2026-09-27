@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Flight | پرواز بعدی تو، همین‌جاست</title>
+<style>
+:root{--navy:#06254a;--blue:#1685ff;--sky:#eaf4ff;--text:#17324d;--muted:#718096;--white:#fff;--line:#dce7f2;--cream:#f7f3ea}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--text);background:#f7faff}
+a{text-decoration:none;color:inherit}.container{max-width:1180px;margin:auto;padding:0 20px}
+header{height:76px;background:var(--navy);color:white;display:flex;align-items:center}
+.nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px}.brand span{color:#35a0ff}
+.plane{font-size:31px;transform:rotate(-12deg)}.menu{display:flex;gap:30px;font-size:14px}.menu a{opacity:.9}.menu a:hover{color:#53adff}
+.hero{min-height:560px;background:linear-gradient(90deg,rgba(4,32,65,.92),rgba(4,32,65,.35)),url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center}
+.hero-inner{width:100%;padding:60px 0}.hero h1{font-size:48px;color:#fff;margin:0 0 12px}.hero h1 span{color:#35a0ff}.hero p{color:#eef6ff;font-size:18px;margin-bottom:34px}
+.search-card{background:#fff;border-radius:22px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.22);max-width:1050px}
+.tabs{display:flex;gap:8px;margin-bottom:15px}.tab{padding:10px 18px;border-radius:12px;border:0;background:#f0f5fa;color:#456;cursor:pointer}.tab.active{background:var(--blue);color:#fff}
+.search-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr auto;gap:10px}.field{border:1px solid var(--line);border-radius:13px;padding:11px 13px;background:#fff}.field label{display:block;color:#8a98a8;font-size:11px;margin-bottom:6px}.field input,.field select{border:0;outline:0;width:100%;font-size:14px;color:var(--text);background:transparent}
+.btn{border:0;border-radius:13px;background:var(--blue);color:#fff;font-weight:700;padding:0 22px;cursor:pointer;font-size:14px}.btn:hover{filter:brightness(.94)}
+.features{background:#fff;padding:35px 0}.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{text-align:center;padding:18px;border-left:1px solid var(--line)}.feature:last-child{border-left:0}.icon{font-size:28px;color:var(--blue);margin-bottom:8px}.feature b{display:block;margin-bottom:6px}.feature small{color:var(--muted)}
+.section{padding:45px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.section h2{margin:0;font-size:26px}.muted{color:var(--muted);font-size:13px}.destinations{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.dest{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 7px 20px rgba(20,60,100,.06)}.dest img{width:100%;height:145px;object-fit:cover}.dest-body{padding:13px}.dest-body strong{display:block;margin-bottom:8px}.price{color:var(--blue);font-size:13px}
+footer{background:var(--navy);color:#cbd9e8;padding:28px 0;margin-top:20px}.footer-row{display:flex;justify-content:space-between;align-items:center}.logo-small{color:#fff;font-weight:800}.logo-small span{color:#35a0ff}
+.results{display:none;background:#f7faff;padding:40px 0}.results.show{display:block}.flight{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0;display:grid;grid-template-columns:1fr 1.4fr 1fr auto;align-items:center;gap:20px}.flight .airline{font-weight:700}.route{display:flex;align-items:center;justify-content:center;gap:16px}.time{font-size:22px;font-weight:800}.line{height:1px;background:#bfd0df;flex:1}.flight-price{font-weight:800;color:var(--blue);font-size:18px}.outline{background:#fff;color:var(--blue);border:1px solid var(--blue);padding:10px 16px}
+.booking{display:none;padding:40px 0}.booking.show{display:block}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;max-width:760px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}.note{background:var(--sky);border-radius:12px;padding:12px;margin:15px 0;color:#315b80;font-size:13px}
+@media(max-width:800px){.menu{display:none}.hero h1{font-size:34px}.search-grid{grid-template-columns:1fr 1fr}.btn{min-height:48px}.features-grid{grid-template-columns:1fr 1fr}.destinations{grid-template-columns:1fr 1fr}.flight{grid-template-columns:1fr}.route{justify-content:flex-start}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+  <div class="brand"><span class="plane">✈</span><div>Your <span>Flight</span><small style="display:block;font-size:8px;letter-spacing:2px;color:#9eb9d2">YOUR NEXT FLIGHT, HERE.</small></div></div>
+  <nav class="menu"><a href="#home">خانه</a><a href="#flights">پروازها</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a></nav>
+  <div>⌕ &nbsp; 👤 ورود / ثبت‌نام</div>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="container hero-inner">
+  <h1>پرواز بعدی <span>تو</span>، همین‌جاست.</h1>
+  <p>پرواز موردنظرت را پیدا کن، مقایسه کن و با خیال راحت رزرو کن.</p>
+  <div class="search-card">
+    <div class="tabs"><button class="tab active">یک‌طرفه</button><button class="tab">رفت و برگشت</button><button class="tab">چندمسیره</button></div>
+    <form id="searchForm" class="search-grid">
+      <div class="field"><label>مبدأ</label><input id="from" placeholder="مثلاً تهران (IKA)" required></div>
+      <div class="field"><label>مقصد</label><input id="to" placeholder="مثلاً مشهد (MHD)" required></div>
+      <div class="field"><label>تاریخ رفت</label><input id="date" type="date" required></div>
+      <div class="field"><label>مسافران</label><select id="passengers"><option>۱ مسافر، اکونومی</option><option>۲ مسافر، اکونومی</option><option>۱ مسافر، بیزنس</option></select></div>
+      <button class="btn" type="submit">🔎 جستجوی پرواز</button>
+    </form>
+  </div>
+</div></section>
+
+<section class="features"><div class="container features-grid">
+  <div class="feature"><div class="icon">⚡</div><b>رزرو سریع و آسان</b><small>در چند قدم ساده</small></div>
+  <div class="feature"><div class="icon">✈</div><b>تنوع ایرلاین‌ها</b><small>داخلی و خارجی</small></div>
+  <div class="feature"><div class="icon">🏷</div><b>قیمت‌های رقابتی</b><small>مقایسه آسان پروازها</small></div>
+  <div class="feature"><div class="icon">🛡</div><b>پرداخت امن</b><small>با درگاه‌های معتبر</small></div>
+</div></section>
+
+<section id="flights" class="results"><div class="container">
+  <div class="section-head"><div><h2>پروازهای پیشنهادی</h2><div class="muted" id="resultText"></div></div></div>
+  <div id="flightList"></div>
+</div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div><h2>مقاصد محبوب</h2><div class="muted">برای سفر بعدی‌ات الهام بگیر</div></div><a href="#" class="muted">مشاهده همه ←</a></div>
+<div class="destinations">
+  <article class="dest"><img src="https://images.unsplash.com/photo-1541432901042-2d8a2f9d2b4d?auto=format&fit=crop&w=700&q=80"><div class="dest-body"><strong>استانبول</strong><span class="price">از ۱۲,۸۵۰,۰۰۰ تومان</span></div></article>
+  <article class="dest"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80"><div class="dest-body"><strong>دبی</strong><span class="price">از ۱۹,۹۰۰,۰۰۰ تومان</span></div></article>
+  <article class="dest"><img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=700&q=80"><div class="dest-body"><strong>تهران</strong><span class="price">از ۲,۵۰۰,۰۰۰ تومان</span></div></article>
+  <article class="dest"><img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&w=700&q=80"><div class="dest-body"><strong>تفلیس</strong><span class="price">از ۱۵,۸۰۰,۰۰۰ تومان</span></div></article>
+</div></div></section>
+
+<section id="booking" class="booking"><div class="container"><div class="panel">
+<h2>اطلاعات مسافر</h2><div class="muted">این بخش در نسخه آزمایشی است و هنوز به صدور واقعی بلیت متصل نیست.</div>
+<div class="note">پرواز انتخابی: <b id="selectedFlight"></b></div>
+<form class="form-grid" onsubmit="finishBooking(event)">
+<div class="field"><label>نام</label><input required placeholder="نام"></div><div class="field"><label>نام خانوادگی</label><input required placeholder="نام خانوادگی"></div>
+<div class="field"><label>شماره پاسپورت / کد ملی</label><input required></div><div class="field"><label>شماره موبایل</label><input required type="tel"></div>
+<div class="field full"><label>ایمیل</label><input required type="email" placeholder="example@email.com"></div>
+<button class="btn full" style="height:50px" type="submit">ادامه به پرداخت</button>
+</form></div></div></section>
+</main>
+<footer><div class="container footer-row"><div class="logo-small">Your <span>Flight</span></div><div>© 2026 Your Flight — نسخه آزمایشی</div></div></footer>
+
+<script>
+const flights=[
+ {airline:"Your Air",code:"YF 214",from:"07:30",to:"09:00",duration:"۱ساعت و ۳۰دقیقه",price:"۲,۸۵۰,۰۰۰ تومان"},
+ {airline:"Sky Iran",code:"SI 408",from:"10:15",to:"11:50",duration:"۱ساعت و ۳۵دقیقه",price:"۳,۱۵۰,۰۰۰ تومان"},
+ {airline:"Pars Air",code:"PA 731",from:"16:40",to:"18:10",duration:"۱ساعت و ۳۰دقیقه",price:"۲,۶۹۰,۰۰۰ تومان"}
+];
+document.getElementById("searchForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const from=document.getElementById("from").value, to=document.getElementById("to").value, date=document.getElementById("date").value;
+ document.getElementById("resultText").textContent=`نتایج نمونه برای ${from} ← ${to} در تاریخ ${date}`;
+ document.getElementById("flightList").innerHTML=flights.map((f,i)=>`
+ <div class="flight"><div><div class="airline">✈ ${f.airline}</div><small>${f.code}</small></div>
+ <div class="route"><div><div class="time">${f.from}</div><small>${from}</small></div><div class="line"></div><div><div class="time">${f.to}</div><small>${to}</small></div></div>
+ <div><small>${f.duration}</small><div class="flight-price">${f.price}</div></div>
+ <button class="btn outline" onclick="selectFlight(${i},'${from}','${to}')">انتخاب</button></div>`).join("");
+ document.getElementById("flights").classList.add("show");document.getElementById("flights").scrollIntoView({behavior:"smooth"});
+});
+function selectFlight(i,from,to){
+ const f=flights[i]; document.getElementById("selectedFlight").textContent=`${f.airline} ${f.code} — ${from} به ${to} — ${f.price}`;
+ document.getElementById("booking").classList.add("show"); document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+function finishBooking(e){e.preventDefault();alert("این نسخه آزمایشی است. مرحله بعدی اتصال به API تأمین‌کننده، درگاه پرداخت و صدور واقعی بلیت است.");}
+</script>
+</body></html>
